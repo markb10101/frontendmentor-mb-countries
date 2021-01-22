@@ -1,0 +1,36 @@
+@import "../../App.module.scss";
+
+.navContainer {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3.5rem;   
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.125);
+
+    h1 {
+        font-size: 1rem;
+        font-weight: 800;
+    }
+
+    .themeIcon {
+        font-size: 0.75rem;
+        padding-right: 0.25rem;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .themeText {
+        font-size: 0.75rem;
+        font-weight: 800;
+    }
+
+}
+
+.navContainer.light {
+    background-color: $light-mode-elements;
+}
+
+.navContainer.dark {
+    background-color: $dark-mode-elements;
+}

@@ -1,8 +1,33 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+    user-select: none;
 }
 
+$dark-mode-elements: #2B3945;
+$dark-mode-background: #202C37;
+$dark-mode-text: #FFF;
 
 
+$light-mode-elements: #FFF;
+$light-mode-background: #FAFAFA;
+$light-mode-text: #111517;
+$light-mode-input: #858585;
+
+
+.pageContainer {
+    
+}
+
+.pageContainer.light {
+    background-color: $light-mode-background;
+}
+
+.pageContainer.dark {
+    background-color: $dark-mode-background;
+}
