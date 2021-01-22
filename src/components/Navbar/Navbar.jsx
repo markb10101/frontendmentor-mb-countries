@@ -8,7 +8,7 @@ import { faSun } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = (props) => {
 
-  const { theme, setTheme, themeClass } = props;
+  const { theme, setTheme } = props;
 
   const themeJSX = theme == "light" ?
     <>
@@ -25,6 +25,7 @@ const Navbar = (props) => {
       <span className={styles.themeText}>Light Mode</span>
     </>
 
+const themeClass = theme == "light" ? styles.light : styles.dark;
 
   return (
     <div className={`${styles.navContainer} ${themeClass}`}>

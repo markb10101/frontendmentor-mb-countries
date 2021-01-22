@@ -31,3 +31,11 @@ $light-mode-input: #858585;
 .pageContainer.dark {
     background-color: $dark-mode-background;
 }
+
+.navContainer.light {
+    background-color: $light-mode-elements;
+}
+
+.navContainer.dark {
+    background-color: $dark-mode-elements;
+}

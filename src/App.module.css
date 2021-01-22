@@ -14,3 +14,11 @@
 .pageContainer.dark {
   background-color: #202C37;
 }
+
+.navContainer.light {
+  background-color: #FFF;
+}
+
+.navContainer.dark {
+  background-color: #2B3945;
+}

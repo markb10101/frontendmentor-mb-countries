@@ -17,7 +17,7 @@ function App() {
   return (
 
     <div className={`${styles.pageContainer} ${themeClass}`}>
-      <Navbar theme={theme} setTheme={setTheme} themeClass={themeClass}/>
+      <Navbar theme={theme} setTheme={setTheme}/>
       <Search />
       <Filter />
       <Countries />
