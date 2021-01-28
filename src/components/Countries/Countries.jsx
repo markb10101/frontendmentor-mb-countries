@@ -8,7 +8,7 @@ const Countries = (props) => {
 
   const themeClass = theme === "light" ? styles.light : styles.dark;
 
-  const countriesJSX = countriesArr.length ? countriesArr.map(countryData => <Country countryData={countryData}/>) : <p>Nothing returned</p>;
+  const countriesJSX = countriesArr.length ? countriesArr.map(countryData => <Country countryData={countryData} key={countryData.numericCode} />) : <p>Nothing returned</p>;
 
   return (
     <>

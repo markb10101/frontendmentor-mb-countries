@@ -14,33 +14,40 @@ function App() {
 
   useEffect(() => {
     fetch(`https://restcountries.eu/rest/v2/all`)
-    .then((res) => res.json())
-    .then((res) => {
-      setCountriesArr(res);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-  },[])
+      .then((res) => res.json())
+      .then((res) => {
+        setCountriesArr(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [])
 
   useEffect(() => {
   }, [theme]);
 
   useEffect(() => {
     getCountries(searchTerm);
-  }, [searchTerm]);
+  }, [searchTerm, regionFilter]);
 
   const themeClass = theme === "light" ? styles.light : styles.dark;
 
   const getCountries = (searchTerm) => {
     fetch(`https://restcountries.eu/rest/v2/name/${searchTerm}`)
-    .then((res) => res.json())
-    .then((res) => {
-      setCountriesArr(res);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+      .then((res) => res.json())
+      .then((res) => {
+        if (regionFilter) {
+          console.log(res.filter((country) => country.region === regionFilter));
+          const resFilteredByRegion = [...res].filter(country => country.region === regionFilter);
+          setCountriesArr(resFilteredByRegion);
+        } else {
+          setCountriesArr(res);
+        }
+        
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   return (

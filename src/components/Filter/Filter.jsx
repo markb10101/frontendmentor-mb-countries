@@ -6,30 +6,36 @@ const Filter = (props) => {
 
   const { theme, regionFilter, setRegionFilter } = props;
 
-  const [filterVisible, setFilterVisible] = useState(false); 
+  const [filterVisible, setFilterVisible] = useState(false);
+  const regionsArr = ["Africa", "America", "Asia", "Europe", "Oceania"];
 
   const themeClass = theme === "light" ? styles.light : styles.dark;
 
 
-  const handleFilter = () => {
-    // ???? as search, ned to do as func passed as prop from app
+  const handleFilter = (regionSelected) => {
+    setRegionFilter(regionSelected);
   }
 
   const showFilterOptions = () => {
-    // ???
+    setFilterVisible(!filterVisible);
   }
+
+  const filterOptionsJSX = (region) => (
+    <li onClick={() => handleFilter(region)}>{region}</li>
+  );
+
+
 
   return (
     <>
       <div className={`${styles.filter} ${themeClass}`}>
         <div>Filter by Region <span className={styles.arrow} onClick={() => showFilterOptions()}>^</span></div>
-
-        <div className={filterVisible ? `${styles.filterOptions}` : `${styles.filterOptions} ${styles.hidden}`}>
-          <div className={styles.region}>Africa</div>
-          <div className={styles.region}>America</div>
-          <div className={styles.region}>Asia</div>
-          <div className={styles.region}>Europe</div>
-          <div className={styles.region}>Oceania</div>
+      </div>
+      <div>
+        <div className={filterVisible ? `${styles.filterOptions} ${themeClass}` : `${styles.filterOptions} ${styles.hidden} ${themeClass}`}>
+          <ul>
+            {regionsArr.map(filterOptionsJSX)}
+          </ul>
         </div>
       </div>
     </>

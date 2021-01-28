@@ -3,6 +3,7 @@
 .countryCard {
     border-radius: 5px;
     width: 12rem;
+    height: 16rem;
     box-shadow: $shadow;
 
     &:hover {
@@ -24,19 +25,21 @@
 
     .cardText {
         padding: 1rem;
+        line-height: 1rem;
 
         h2 {
-            font-size: 1rem;
+            font-size: 0.85rem;
+            padding: 0.5rem 0;
         }
 
         .statisticType {
-            font-size: 0.75rem;
+            font-size: 0.65rem;
             font-weight: 800;
 
         }
 
         .statistic {
-            font-size: 0.75rem;
+            font-size: 0.65rem;
 
         }
     }
