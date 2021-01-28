@@ -1,0 +1,18 @@
+@import "../../App.module.scss";
+
+.countryContainer {
+
+    width: 48rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 1.75rem;
+    
+}
+
+.countryContainer.light {
+    color: $light-mode-text;
+}
+
+.countryContainer.dark {
+    color: $dark-mode-text;
+}

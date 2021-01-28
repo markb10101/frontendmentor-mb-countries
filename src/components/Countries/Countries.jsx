@@ -1,10 +1,22 @@
 import React from "react";
 import styles from "./Countries.module.scss";
+import Country from "../Country/Country";
 
-const Countries = () => {
+const Countries = (props) => {
+
+  const { theme, countriesArr } = props;
+
+  const themeClass = theme === "light" ? styles.light : styles.dark;
+
+  const countriesJSX = countriesArr.length ? countriesArr.map(countryData => <Country countryData={countryData}/>) : <p>Nothing returned</p>;
+
   return (
     <>
-      <p>Countries works</p>
+      <div className={`${styles.countryContainer} ${themeClass}`}>
+
+      {countriesJSX}
+
+      </div>
     </>
   );
 };

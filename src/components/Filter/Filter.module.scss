@@ -1,0 +1,34 @@
+@import "../../App.module.scss";
+
+.filter {
+
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    padding: 0.65rem 1rem;
+    font-size: 0.75rem;
+
+    box-shadow: $shadow;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+
+        .arrow {
+            font-size: 0.65rem;
+            transform: rotate(180deg);
+        }
+    }
+
+
+}
+
+.filter.light {
+    background-color: $light-mode-elements;
+    color: $light-mode-text;
+}
+
+.filter.dark {
+    background-color: $dark-mode-elements;
+    color: $dark-mode-text;
+}

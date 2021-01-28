@@ -1,0 +1,48 @@
+@import "../../App.module.scss";
+
+.search {
+    width: 21rem;
+    height:2.5rem;
+    border-radius: 5px;
+    box-shadow: $shadow;
+    padding: 0.45rem 1.5rem;
+
+    .searchIcon {
+        font-size: 0.75rem;
+    }
+
+    input {
+        padding: 0 1rem;
+        font-size: 0.75rem;
+        border-style: none;
+        font-weight: 300;
+
+        &:focus {
+            outline: none;
+            border-style: none;
+        }
+    }
+
+}
+
+.search.light {
+    background-color: $light-mode-elements;
+    color: $light-mode-text;
+
+    input {
+        background-color: $light-mode-elements;
+        color: $light-mode-text;
+    }
+}
+
+.search.dark {
+    background-color: $dark-mode-elements;
+    color: $dark-mode-text;
+    input {
+        background-color: $dark-mode-elements;
+        color: $dark-mode-text;
+        &::placeholder {
+            color: $dark-mode-text;
+        }
+    }
+}

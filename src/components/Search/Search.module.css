@@ -29,38 +29,44 @@
   background-color: #202C37;
 }
 
-.navContainer {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 3.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.125);
+.search {
+  width: 21rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  box-shadow: 0px 2px 12px 4px rgba(0, 0, 0, 0.125);
+  padding: 0.45rem 1.5rem;
 }
-.navContainer h1 {
-  font-size: 1rem;
-  font-weight: 800;
-}
-.navContainer .theme {
+.search .searchIcon {
   font-size: 0.75rem;
-  padding-right: 0.25rem;
-  font-weight: 600;
 }
-.navContainer .theme:hover {
-  cursor: pointer;
+.search input {
+  padding: 0 1rem;
+  font-size: 0.75rem;
+  border-style: none;
+  font-weight: 300;
 }
-.navContainer .theme span {
-  padding: 0 0.25rem;
+.search input:focus {
+  outline: none;
+  border-style: none;
 }
 
-.navContainer.light {
+.search.light {
   background-color: #FFF;
+  color: #111517;
 }
-.navContainer.light h1, .navContainer.light .themeIcon, .navContainer.light .themeText {
+.search.light input {
+  background-color: #FFF;
   color: #111517;
 }
 
-.navContainer.dark {
+.search.dark {
   background-color: #2B3945;
+  color: #FFF;
 }
-.navContainer.dark h1, .navContainer.dark .theme {
+.search.dark input {
+  background-color: #2B3945;
+  color: #FFF;
+}
+.search.dark input::placeholder {
   color: #FFF;
 }

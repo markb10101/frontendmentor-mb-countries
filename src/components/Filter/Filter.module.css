@@ -17,9 +17,6 @@
 .pageContainer .searchFilterRow .searchContainer, .pageContainer .searchFilterRow .filterContainer {
   padding: 2rem 3.5rem;
 }
-.pageContainer .countriesContainer {
-  padding: 2rem 3.5rem;
-}
 
 .pageContainer.light {
   background-color: #FAFAFA;
@@ -27,4 +24,31 @@
 
 .pageContainer.dark {
   background-color: #202C37;
+}
+
+.filter {
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  padding: 0.65rem 1rem;
+  font-size: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.125);
+}
+.filter div {
+  display: flex;
+  justify-content: space-between;
+}
+.filter div .arrow {
+  font-size: 0.65rem;
+  transform: rotate(180deg);
+}
+
+.filter.light {
+  background-color: #FFF;
+  color: #111517;
+}
+
+.filter.dark {
+  background-color: #2B3945;
+  color: #FFF;
 }

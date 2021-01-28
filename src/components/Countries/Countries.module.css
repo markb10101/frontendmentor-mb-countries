@@ -28,3 +28,18 @@
 .pageContainer.dark {
   background-color: #202C37;
 }
+
+.countryContainer {
+  width: 48rem;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 1.75rem;
+}
+
+.countryContainer.light {
+  color: #111517;
+}
+
+.countryContainer.dark {
+  color: #FFF;
+}
