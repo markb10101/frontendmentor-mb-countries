@@ -9,19 +9,25 @@ function App() {
 
   const [theme, setTheme] = useState("light");
   const [countriesArr, setCountriesArr] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("all");
+  const [searchTerm, setSearchTerm] = useState("");
   const [regionFilter, setRegionFilter] = useState("");
 
   useEffect(() => {
+    console.log("getting all countries");
     fetch(`https://restcountries.eu/rest/v2/all`)
       .then((res) => res.json())
       .then((res) => {
-        setCountriesArr(res);
+        if (regionFilter) {
+          const resFilteredByRegion = [...res].filter(country => country.region === regionFilter);
+          setCountriesArr(resFilteredByRegion);
+        } else {
+          setCountriesArr(res);
+        }
       })
       .catch((err) => {
         console.log(err);
       });
-  }, [])
+  }, [regionFilter])
 
   useEffect(() => {
   }, [theme]);
@@ -37,13 +43,12 @@ function App() {
       .then((res) => res.json())
       .then((res) => {
         if (regionFilter) {
-          console.log(res.filter((country) => country.region === regionFilter));
           const resFilteredByRegion = [...res].filter(country => country.region === regionFilter);
           setCountriesArr(resFilteredByRegion);
         } else {
           setCountriesArr(res);
         }
-        
+
       })
       .catch((err) => {
         console.log(err);
