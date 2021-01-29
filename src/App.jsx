@@ -13,21 +13,9 @@ function App() {
   const [regionFilter, setRegionFilter] = useState("");
 
   useEffect(() => {
-    console.log("getting all countries");
-    fetch(`https://restcountries.eu/rest/v2/all`)
-      .then((res) => res.json())
-      .then((res) => {
-        if (regionFilter) {
-          const resFilteredByRegion = [...res].filter(country => country.region === regionFilter);
-          setCountriesArr(resFilteredByRegion);
-        } else {
-          setCountriesArr(res);
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, [regionFilter])
+    console.log("getting all countries on page mount");
+    getCountries();
+  }, [])
 
   useEffect(() => {
   }, [theme]);
@@ -39,7 +27,8 @@ function App() {
   const themeClass = theme === "light" ? styles.light : styles.dark;
 
   const getCountries = (searchTerm) => {
-    fetch(`https://restcountries.eu/rest/v2/name/${searchTerm}`)
+    const searchString = searchTerm !== "" ? `https://restcountries.eu/rest/v2/name/${searchTerm}` : `https://restcountries.eu/rest/v2/all`;
+    fetch(searchString)
       .then((res) => res.json())
       .then((res) => {
         if (regionFilter) {
@@ -58,7 +47,7 @@ function App() {
   return (
 
     <div className={`${styles.pageContainer} ${themeClass}`}>
-      <Navbar theme={theme} setTheme={setTheme} />
+        <Navbar theme={theme} setTheme={setTheme} />
 
       <div className={styles.searchFilterRow}>
         <div className={styles.searchContainer}>

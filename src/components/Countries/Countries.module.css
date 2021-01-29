@@ -9,13 +9,14 @@
 
 .pageContainer {
   height: 100vh;
+  max-width: 1440px;
 }
 .pageContainer .searchFilterRow {
   display: flex;
   justify-content: space-between;
 }
 .pageContainer .searchFilterRow .searchContainer, .pageContainer .searchFilterRow .filterContainer {
-  padding: 2rem 3.5rem;
+  padding: 2rem 3.5rem 0.25rem 3.5rem;
 }
 .pageContainer .countriesContainer {
   padding: 2rem 3.5rem;
@@ -34,12 +35,4 @@
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-gap: 1.75rem;
-}
-
-.countryContainer.light {
-  color: #111517;
-}
-
-.countryContainer.dark {
-  color: #FFF;
 }

@@ -1,15 +1,21 @@
 import React from "react";
+import { Link } from "@reach/router";
 import styles from "./Country.module.scss";
 
 const Country = (props) => {
 
-  const { countryData } = props;
+  const { theme, countryData } = props;
+
+  const themeClass = theme === "light" ? styles.light : styles.dark;
+  // todo
+  // add commas to population number
 
   return (
     <>
-      <div className={styles.countryCard}>
+    <Link className={styles.linkContainer} to={`/detail?numericCode=${countryData.numericCode}`}>
+      <div className={`${styles.countryCard} ${themeClass}`}>
         <div className={styles.flagContainer}>
-          <img src={countryData.flag} />
+          <img src={countryData.flag} alt={`Flag of ${countryData.name}`}/>
         </div>
         <div className={styles.cardText}>
           <h2>{countryData.name}</h2>
@@ -18,6 +24,7 @@ const Country = (props) => {
           <div><span className={styles.statisticType}>Capital: </span><span className={styles.statistic}>{countryData.capital}</span></div>
         </div>
       </div>
+    </Link>
     </>
   );
 };

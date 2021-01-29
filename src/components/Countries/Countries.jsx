@@ -6,13 +6,14 @@ const Countries = (props) => {
 
   const { theme, countriesArr } = props;
 
-  const themeClass = theme === "light" ? styles.light : styles.dark;
+  
 
-  const countriesJSX = countriesArr.length ? countriesArr.map(countryData => <Country countryData={countryData} key={countryData.numericCode} />) : <p>Nothing returned</p>;
+  const countriesJSX = countriesArr.length ? countriesArr.map(countryData => <Country theme={theme} countryData={countryData} key={countryData.numericCode} />) :
+                                              <p>No country matches your Search and Filter settings.</p>;
 
   return (
     <>
-      <div className={`${styles.countryContainer} ${themeClass}`}>
+      <div className={styles.countryContainer}>
 
       {countriesJSX}
 

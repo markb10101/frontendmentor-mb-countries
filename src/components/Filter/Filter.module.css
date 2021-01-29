@@ -44,9 +44,11 @@
   justify-content: space-between;
 }
 .filter div .arrow {
-  cursor: pointer;
   font-size: 0.65rem;
   padding-top: 0.125rem;
+}
+.filter div:hover {
+  cursor: pointer;
 }
 
 .filterOptions {

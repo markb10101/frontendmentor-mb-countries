@@ -13,11 +13,14 @@
     div {
         display: flex;
         justify-content: space-between;
-
-        .arrow {
-            cursor: pointer;
+        
+        .arrow {           
             font-size: 0.65rem;
             padding-top: 0.125rem;
+        }
+
+        &:hover{
+            cursor: pointer;
         }
     }
 }

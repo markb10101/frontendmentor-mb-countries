@@ -32,7 +32,7 @@ const Filter = (props) => {
   return (
     <>
       <div className={`${styles.filter} ${themeClass}`}>
-        <div>Filter by Region <span className={styles.arrow} onClick={() => showFilterOptions()}><FontAwesomeIcon icon={faChevronDown} /></span></div>
+        <div onClick={() => showFilterOptions()}>Filter by Region <span className={styles.arrow}><FontAwesomeIcon icon={faChevronDown} /></span></div>
       </div>
       <div>
         <div className={filterVisible ? `${styles.filterOptions} ${themeClass}` : `${styles.filterOptions} ${styles.hidden} ${themeClass}`}>
