@@ -20,35 +20,37 @@ const Detail = (props) => {
       {backButtonJSX}
 
       <div className={styles.detailPanelContainer}>
-
         <div className={styles.countryFlag}>
-        <img src={countryDetails.flag} alt={`Flag of ${countryDetails.name}`} />
+          <img src={countryDetails.flag} alt={`Flag of ${countryDetails.name}`} />
         </div>
-        <div className={styles.countryData}>
+        <div className={`${styles.countryData} ${themeClass}`}>
+          <div className={styles.countryDataUpperSection}>
 
-          <div className={styles.dataLeftCol}>
-            <h2>{countryDetails.name}</h2>
-            <p>Native Name: {countryDetails.nativeName}</p>
-            <p>Population: {countryDetails.population}</p>
-            <p>Region: {countryDetails.region}</p>
-            <p>Sub-region: {countryDetails.subregion}</p>
-            <p>Capital: {countryDetails.capital}</p>
-          </div>
-          <div className={styles.dataRightCol}>
-          <p>Top Level Domain: xxxxx</p>
-            <p>Currencies: xxxxx</p>
-            <p>Languages: xxxxx</p>
-            {/* <p>Top Level Domain: {countryDetails.topLevelDomain}</p>
+
+            <div className={styles.dataLeftCol}>
+              <h2>{countryDetails.name}</h2>
+              <p><span>Native Name: </span>{countryDetails.nativeName}</p>
+              <p><span>Population: </span>{countryDetails.population}</p>
+              <p><span>Region: </span>{countryDetails.region}</p>
+              <p><span>Sub-region: </span>{countryDetails.subregion}</p>
+              <p><span>Capital: </span>{countryDetails.capital}</p>
+            </div>
+            <div className={styles.dataRightCol}>
+              <p><span>Top Level Domain: </span>xxxxx</p>
+              <p><span>Currencies: </span>xxxxx</p>
+              <p><span>Languages: </span>xxxxx</p>
+              {/* <p>Top Level Domain: {countryDetails.topLevelDomain}</p>
             <p>Currencies: {countryDetails.currencies}</p>
             <p>Languages: {countryDetails.languages}</p> */}
+            </div>
           </div>
-        </div>
-        {/* <div className={styles.dataLinks}>Border Countries: {countryDetails.borders}</div> */}
 
+          {/* <div className={styles.dataLinks}>Border Countries: {countryDetails.borders}</div> */}
+          <div className={styles.dataBorders}><span>Border Countries: </span>xxxxxx</div>
+
+        </div>
 
       </div>
-
-
     </>
   );
 };

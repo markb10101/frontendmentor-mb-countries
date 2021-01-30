@@ -2,20 +2,20 @@
 
 .filter {
 
-    width: 9rem;
-    height: 2.5rem;
+    width: 14rem;
+    height: 3rem;
     border-radius: 5px;
-    padding: 0.65rem 1rem;
-    font-size: 0.75rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
     font-weight: 600;
     box-shadow: $shadow;
 
     div {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         
         .arrow {           
-            font-size: 0.65rem;
+            font-size: 1rem;
             padding-top: 0.125rem;
         }
 
@@ -27,11 +27,11 @@
 
 .filterOptions {
     position: absolute;     
-    width: 9rem;
-    font-size: 0.75rem;
+    width: 14rem;
+    font-size: 1rem;
     font-weight: 300;
     border-radius: 5px;
-    padding: 0.65rem 1rem;
+    padding: 0.65rem 2rem;
     margin-top: 0.25rem;
     box-shadow: $shadow;
 

@@ -13,10 +13,12 @@ const Search = (props) => {
 
   const searchIconJSX = <span className={styles.searchIcon} onClick={()=>getCountries(searchTerm)}><FontAwesomeIcon icon={faSearch} /></span>;
 
+  const placeholderJSX = searchTerm ? `${searchTerm}` : `Search for a country`;
+
   return (
     <>
       <form className={`${styles.search} ${themeClass}`}>
-        {searchIconJSX}<input type='text' onInput={e => setSearchTerm(e.target.value)} placeholder='Search for a country...'/>
+        {searchIconJSX}<input type='text' onInput={e => setSearchTerm(e.target.value)} placeholder={placeholderJSX}/>
         </form>
     </>
   );
