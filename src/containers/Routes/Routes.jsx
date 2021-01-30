@@ -3,13 +3,13 @@ import { Router } from "@reach/router";
 
 import Detail from "../../components/Detail"
 
-const Routes = (props) => {
-
-    const { numericCode } = props;
+const Routes = () => {
 
     return (
         <Router>
-           <Detail path="../detail/" />;
+           <Details path="/details" />;
+
+
         </Router>
     )
 

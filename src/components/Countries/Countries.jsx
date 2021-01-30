@@ -4,12 +4,12 @@ import Country from "../Country/Country";
 
 const Countries = (props) => {
 
-  const { theme, countriesArr } = props;
+  const { theme, countriesArr, renderDetailView, viewingDetails, setViewingDetails } = props;
 
-  
 
-  const countriesJSX = countriesArr.length ? countriesArr.map(countryData => <Country theme={theme} countryData={countryData} key={countryData.numericCode} />) :
-                                              <p>No country matches your Search and Filter settings.</p>;
+  const countriesJSX = countriesArr.length ?  (countriesArr.map(countryData => <Country theme={theme} countryData={countryData} key={countryData.numericCode} renderDetailView={renderDetailView} viewingDetails={viewingDetails} setViewingDetails={setViewingDetails}/>))
+                                              :
+                                              (<p>No country matches your Search and Filter settings.</p>);
 
   return (
     <>
