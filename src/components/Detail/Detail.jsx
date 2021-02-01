@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 
 const Detail = (props) => {
 
-  const { theme, countryDetails, setViewingDetails } = props;
+  const { theme, countryDetails, setViewingDetails, renderDetailView } = props;
 
   const themeClass = theme === "light" ? styles.light : styles.dark;
 
@@ -14,17 +14,34 @@ const Detail = (props) => {
     <FontAwesomeIcon icon={faArrowLeft} /><span className={styles.backText}>Back</span></div>;
 
   const currenciesJSX = countryDetails.currencies.map((curr, i) => curr.name).join(", ");
-
   const languagesJSX = countryDetails.languages.map((lang) => lang.name).join(", ");
 
-  const borderButtonsJSX = countryDetails.borders.map((country) => <button className={`${themeClass}`}>{country}</button>);
+  const [borderNamesArr, setBorderNamesArr] = useState([]);
+  const [borderNumericCodeArr, setBorderNumericCodeArr] = useState([]);
 
   const numberWithSeparator = (num, sep) => {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, sep);
   }
 
+  useEffect(()=>{   
 
+    setBorderNamesArr([]);
+    setBorderNumericCodeArr([]);
 
+    countryDetails.borders.forEach((alpha3Code) => {
+      fetch(`https://restcountries.eu/rest/v2/alpha?codes=${alpha3Code}`)
+      .then((res) => res.json())
+      .then((res) => {
+        setBorderNamesArr(borderNamesArr => borderNamesArr.concat(res[0].name));
+        setBorderNumericCodeArr(borderNumericCodeArr => borderNumericCodeArr.concat(res[0].numericCode))
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    });
+  },[countryDetails])
+
+  const borderCountriesJSX = borderNamesArr.map((countryName,index) => <button onClick={() => renderDetailView(borderNumericCodeArr[index])} className={`${themeClass}`}>{countryName}</button>);
 
   return (
     <>
@@ -52,7 +69,7 @@ const Detail = (props) => {
               <p><span>Languages: </span>{languagesJSX}</p>
             </div>
           </div>
-          <div className={styles.dataBorders}><span>Border Countries: </span>{borderButtonsJSX}</div>
+          <div className={styles.borderTitle}>Border Countries:</div><div className={styles.dataBorders}>{borderCountriesJSX}</div>
 
         </div>
 

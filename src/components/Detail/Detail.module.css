@@ -44,13 +44,13 @@
   border-radius: 5px;
   box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.125);
   padding: 0.75rem 1.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
   font-size: 1rem;
 }
 .backButton .backText {
   font-size: 1rem;
   font-weight: 600;
-  padding-left: 1.5rem;
+  padding-left: 1rem;
 }
 .backButton:hover {
   cursor: pointer;
@@ -70,7 +70,7 @@
   display: flex;
 }
 .detailPanelContainer .countryFlag {
-  width: 600px;
+  width: 520px;
 }
 .detailPanelContainer .countryFlag img {
   width: 100%;
@@ -85,12 +85,12 @@
 }
 .detailPanelContainer .countryData h2 {
   margin-left: 6rem;
-  font-size: 2rem;
+  font-size: 1.75rem;
   padding-bottom: 2rem;
 }
 .detailPanelContainer .countryData .countryDataUpperSection {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .detailPanelContainer .countryData .countryDataUpperSection .dataLeftCol,
 .detailPanelContainer .countryData .countryDataUpperSection .dataRightCol {
@@ -100,22 +100,36 @@
 .detailPanelContainer .countryData .countryDataUpperSection .dataRightCol p span {
   font-weight: 600;
 }
+.detailPanelContainer .countryData .borderTitle {
+  padding-top: 2rem;
+  margin-left: 6rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
 .detailPanelContainer .countryData .dataBorders {
   margin-left: 6rem;
-  padding-top: 6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 4rem;
 }
-.detailPanelContainer .countryData .dataBorders span {
-  font-weight: 600;
-}
-.detailPanelContainer .countryData button {
+.detailPanelContainer .countryData .dataBorders button {
   border: none;
   margin: 0 0.25rem;
   padding: 0.25rem 1rem;
   box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.125);
 }
-.detailPanelContainer .countryData button.light {
+.detailPanelContainer .countryData .dataBorders button:hover {
+  cursor: pointer;
+}
+.detailPanelContainer .countryData .dataBorders button.light {
   background-color: #FFF;
   color: #111517;
+}
+.detailPanelContainer .countryData .dataBorders button.dark {
+  background-color: #2B3945;
+  color: #FFF;
 }
 .detailPanelContainer .countryData.light {
   color: #111517;

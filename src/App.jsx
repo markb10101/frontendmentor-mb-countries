@@ -66,7 +66,7 @@ function App() {
 
   const mainPageContentJSX = viewingDetails ? (
     <div className={styles.detailsContainer}>
-      <Detail theme={theme} countryDetails={countryDetails} setViewingDetails={setViewingDetails} />
+      <Detail renderDetailView={renderDetailView} theme={theme} countryDetails={countryDetails} setViewingDetails={setViewingDetails} />
     </div>
   )
   : (

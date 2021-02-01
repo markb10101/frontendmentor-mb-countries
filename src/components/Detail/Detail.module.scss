@@ -7,13 +7,13 @@
     border-radius: 5px;
     box-shadow: $shadow;
     padding: 0.75rem 1.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
     font-size: 1rem;
 
     .backText {
         font-size: 1rem;
         font-weight: 600;
-        padding-left: 1.5rem;
+        padding-left: 1rem;
     }
 
     &:hover {
@@ -36,7 +36,7 @@
     display: flex;
 
     .countryFlag {
-        width: 600px;
+        width: 520px;
 
         img {
             width: 100%;
@@ -53,17 +53,18 @@
 
         h2 {
             margin-left: 6rem;
-            font-size: 2rem;
+            font-size: 1.75rem;
             padding-bottom: 2rem;
         }
 
         .countryDataUpperSection {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
 
             .dataLeftCol,
             .dataRightCol {
                 margin-left: 6rem;
+
                 p {
                     span {
                         font-weight: 600;
@@ -72,26 +73,43 @@
             }
         }
 
+        .borderTitle {
+            padding-top: 2rem;
+            margin-left: 6rem;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
         .dataBorders {
             margin-left: 6rem;
-            padding-top: 6rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+            justify-content: space-between;
+            margin-bottom: 4rem;
 
-            span {
-                font-weight: 600;
+            button {
+                border: none;
+                margin: 0 0.25rem;
+                padding: 0.25rem 1rem;
+                box-shadow: $shadow;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            button.light {
+                background-color: $light-mode-elements;
+                color: $light-mode-text;
+            }
+
+            button.dark {
+                background-color: $dark-mode-elements;
+                color: $dark-mode-text;
             }
         }
 
-        button {
-            border: none;
-            margin: 0 0.25rem;
-            padding: 0.25rem 1rem;
-            box-shadow: $shadow;
-        }
 
-        button.light {
-            background-color: $light-mode-elements;
-            color: $light-mode-text;
-        }
     }
 
     .countryData.light {
