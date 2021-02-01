@@ -3,7 +3,7 @@ import styles from "./Country.module.scss";
 
 const Country = (props) => {
 
-  const { theme, countryData, renderDetailView, viewingDetails, setViewingDetails } = props;
+  const { theme, countryData, renderDetailView } = props;
 
   const themeClass = theme === "light" ? styles.light : styles.dark;
 

@@ -11,7 +11,6 @@ body {
   background-color: #202C37;
 }
 body .pageContainer {
-  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -41,11 +40,10 @@ body .pageContainer.dark {
 }
 
 @media only screen and (max-width: 601px) {
-  .pageContainer {
-    width: 100%;
+  body .pageContainer {
     margin: 0 auto;
   }
-  .pageContainer .searchFilterRow {
+  body .pageContainer .searchFilterRow {
     width: 100%;
     padding-top: 4rem;
     display: flex;
