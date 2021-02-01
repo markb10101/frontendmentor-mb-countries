@@ -15,7 +15,7 @@
 .pageContainer .searchFilterRow {
   width: 100%;
   max-width: 1440px;
-  padding-top: 6rem;
+  padding-top: 4rem;
   display: flex;
   justify-content: space-between;
 }
@@ -26,8 +26,8 @@
   padding: 2rem 3.5rem;
 }
 .pageContainer .detailsContainer {
-  padding: 8rem 3.5rem;
-  height: 100vh;
+  padding: 6rem 3.5rem;
+  height: 100%;
 }
 
 .pageContainer.light {
@@ -38,6 +38,18 @@
   background-color: #202C37;
 }
 
+@media only screen and (max-width: 512px) {
+  .pageContainer {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .pageContainer .searchFilterRow {
+    width: 100%;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
 .search {
   width: 30rem;
   height: 3rem;
@@ -78,4 +90,10 @@
 }
 .search.dark input::placeholder {
   color: #FFF;
+}
+
+@media only screen and (max-width: 512px) {
+  .search {
+    width: 24rem;
+  }
 }

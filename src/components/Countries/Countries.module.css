@@ -8,7 +8,6 @@
 }
 
 .pageContainer {
-  border: 1px solid black;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
@@ -27,7 +26,8 @@
   padding: 2rem 3.5rem;
 }
 .pageContainer .detailsContainer {
-  padding: 5rem 3.5rem;
+  padding: 6rem 3.5rem;
+  height: 100%;
 }
 
 .pageContainer.light {
@@ -38,8 +38,26 @@
   background-color: #202C37;
 }
 
+@media only screen and (max-width: 512px) {
+  .pageContainer {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .pageContainer .searchFilterRow {
+    width: 100%;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
 .countryContainer {
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-gap: 3.5rem;
+}
+
+@media only screen and (max-width: 512px) {
+  .countryContainer {
+    grid-template-columns: auto;
+  }
 }

@@ -57,3 +57,40 @@
 .countryCard.dark {
     color: $dark-mode-text;
 }
+
+
+// mobile styles
+@media only screen and (max-width: $mobile-width) {
+
+    .linkContainer {
+        .countryCard {
+
+            width: 24rem;
+            height: 30rem;
+
+            .flagContainer {
+                width: 24rem;
+                height: 14rem;
+            }
+
+            .cardText {
+
+                line-height: 2rem;
+
+                h2 {
+                    font-size: 1.75rem;
+                }
+
+                .statisticType {
+                    font-size: 1.25rem;
+                    font-weight: 800;
+                }
+
+                .statistic {
+                    font-size: 1.25rem;
+                }
+            }
+
+        }
+    }
+}

@@ -8,7 +8,6 @@
 }
 
 .pageContainer {
-  border: 1px solid black;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
@@ -27,7 +26,8 @@
   padding: 2rem 3.5rem;
 }
 .pageContainer .detailsContainer {
-  padding: 5rem 3.5rem;
+  padding: 6rem 3.5rem;
+  height: 100%;
 }
 
 .pageContainer.light {
@@ -38,6 +38,18 @@
   background-color: #202C37;
 }
 
+@media only screen and (max-width: 512px) {
+  .pageContainer {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .pageContainer .searchFilterRow {
+    width: 100%;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
 .linkContainer {
   text-decoration: none;
 }
@@ -83,4 +95,28 @@
 
 .countryCard.dark {
   color: #FFF;
+}
+
+@media only screen and (max-width: 512px) {
+  .linkContainer .countryCard {
+    width: 24rem;
+    height: 30rem;
+  }
+  .linkContainer .countryCard .flagContainer {
+    width: 24rem;
+    height: 14rem;
+  }
+  .linkContainer .countryCard .cardText {
+    line-height: 2rem;
+  }
+  .linkContainer .countryCard .cardText h2 {
+    font-size: 1.75rem;
+  }
+  .linkContainer .countryCard .cardText .statisticType {
+    font-size: 1.25rem;
+    font-weight: 800;
+  }
+  .linkContainer .countryCard .cardText .statistic {
+    font-size: 1.25rem;
+  }
 }

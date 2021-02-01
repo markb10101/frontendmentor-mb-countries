@@ -27,7 +27,7 @@
 }
 .pageContainer .detailsContainer {
   padding: 6rem 3.5rem;
-  height: 100vh;
+  height: 100%;
 }
 
 .pageContainer.light {
@@ -38,6 +38,18 @@
   background-color: #202C37;
 }
 
+@media only screen and (max-width: 375px) {
+  .pageContainer {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .pageContainer .searchFilterRow {
+    width: 100%;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
 .backButton {
   width: 8rem;
   height: 3rem;
@@ -79,35 +91,32 @@
   box-sizing: border-box;
 }
 .detailPanelContainer .countryData {
+  margin-left: 10%;
+  width: 50%;
   font-size: 1rem;
   font-weight: 300;
   line-height: 2rem;
 }
 .detailPanelContainer .countryData h2 {
-  margin-left: 6rem;
   font-size: 1.75rem;
   padding-bottom: 2rem;
 }
 .detailPanelContainer .countryData .countryDataUpperSection {
   display: flex;
-  justify-content: space-between;
-}
-.detailPanelContainer .countryData .countryDataUpperSection .dataLeftCol,
-.detailPanelContainer .countryData .countryDataUpperSection .dataRightCol {
-  margin-left: 6rem;
 }
 .detailPanelContainer .countryData .countryDataUpperSection .dataLeftCol p span,
 .detailPanelContainer .countryData .countryDataUpperSection .dataRightCol p span {
   font-weight: 600;
 }
+.detailPanelContainer .countryData .countryDataUpperSection .dataRightCol {
+  margin-left: 20%;
+}
 .detailPanelContainer .countryData .borderTitle {
   padding-top: 2rem;
-  margin-left: 6rem;
   font-weight: 600;
   font-size: 1rem;
 }
 .detailPanelContainer .countryData .dataBorders {
-  margin-left: 6rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
@@ -136,4 +145,78 @@
 }
 .detailPanelContainer .countryData.dark {
   color: #FFF;
+}
+
+@media only screen and (max-width: 375px) {
+  .detailPanelContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .detailPanelContainer .countryFlag {
+    width: 100%;
+  }
+  .detailPanelContainer .countryFlag img {
+    object-fit: cover;
+  }
+  .detailPanelContainer .countryData {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 2.25rem;
+  }
+  .detailPanelContainer .countryData h2 {
+    margin-left: 0;
+    font-size: 2rem;
+    padding: 4rem 0 2rem 0;
+  }
+  .detailPanelContainer .countryData .countryDataUpperSection {
+    display: flex;
+    flex-direction: column;
+  }
+  .detailPanelContainer .countryData .countryDataUpperSection .dataLeftCol, .detailPanelContainer .countryData .countryDataUpperSection .dataRightCol {
+    margin-left: 0;
+  }
+  .detailPanelContainer .countryData .countryDataUpperSection .dataLeftCol p span, .detailPanelContainer .countryData .countryDataUpperSection .dataRightCol p span {
+    font-weight: 600;
+  }
+  .detailPanelContainer .countryData .countryDataUpperSection .dataRightCol {
+    padding-top: 4rem;
+  }
+  .detailPanelContainer .countryData .borderTitle {
+    padding-top: 2rem;
+    margin-left: 0rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+  .detailPanelContainer .countryData .dataBorders {
+    margin-left: 0rem;
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+  }
+  .detailPanelContainer .countryData .dataBorders button {
+    border: none;
+    margin: 0 0.25rem;
+    padding: 0.25rem 1rem;
+    box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.125);
+  }
+  .detailPanelContainer .countryData .dataBorders button:hover {
+    cursor: pointer;
+  }
+  .detailPanelContainer .countryData .dataBorders button.light {
+    background-color: #FFF;
+    color: #111517;
+  }
+  .detailPanelContainer .countryData .dataBorders button.dark {
+    background-color: #2B3945;
+    color: #FFF;
+  }
+  .detailPanelContainer .countryData.light {
+    color: #111517;
+  }
+  .detailPanelContainer .countryData.dark {
+    color: #FFF;
+  }
 }

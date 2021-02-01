@@ -27,7 +27,7 @@
 }
 .pageContainer .detailsContainer {
   padding: 6rem 3.5rem;
-  height: 100vh;
+  height: 100%;
 }
 
 .pageContainer.light {
@@ -36,4 +36,17 @@
 
 .pageContainer.dark {
   background-color: #202C37;
+}
+
+@media only screen and (max-width: 375px) {
+  .pageContainer {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .pageContainer .searchFilterRow {
+    width: 100%;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
 }

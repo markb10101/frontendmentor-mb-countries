@@ -47,41 +47,41 @@
     }
 
     .countryData {
+        margin-left: 10%;
+        width: 50%;
         font-size: 1rem;
         font-weight: 300;
         line-height: 2rem;
 
         h2 {
-            margin-left: 6rem;
             font-size: 1.75rem;
             padding-bottom: 2rem;
         }
 
         .countryDataUpperSection {
             display: flex;
-            justify-content: space-between;
 
             .dataLeftCol,
             .dataRightCol {
-                margin-left: 6rem;
-
                 p {
                     span {
                         font-weight: 600;
                     }
                 }
             }
+
+            .dataRightCol {
+                margin-left: 20%;
+            }           
         }
 
         .borderTitle {
             padding-top: 2rem;
-            margin-left: 6rem;
             font-weight: 600;
             font-size: 1rem;
         }
 
         .dataBorders {
-            margin-left: 6rem;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 1rem;
@@ -108,8 +108,6 @@
                 color: $dark-mode-text;
             }
         }
-
-
     }
 
     .countryData.light {
@@ -119,4 +117,99 @@
     .countryData.dark {
         color: $dark-mode-text;
     }
+}
+
+@media only screen and (max-width: $mobile-width) {
+
+    .detailPanelContainer {
+        display: flex;
+        flex-direction: column;
+    
+        .countryFlag {
+            width: 100%;
+              
+            img {
+                object-fit: cover;
+            }
+        }
+    
+        .countryData {
+            font-size: 1.25rem;
+            font-weight: 300;
+            line-height: 2.25rem;
+    
+            h2 {
+                margin-left: 0;
+                font-size: 2rem;
+                padding: 4rem 0 2rem 0;
+            }
+    
+            .countryDataUpperSection {
+                display: flex;
+                flex-direction: column;
+    
+                .dataLeftCol, .dataRightCol {
+                   margin-left: 0;
+    
+                    p {
+                        span {
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+                .dataRightCol {
+                    padding-top: 4rem;
+                }
+
+            }
+    
+            .borderTitle {
+                padding-top: 2rem;
+                margin-left: 0rem;
+                font-weight: 600;
+                font-size: 1.25rem;
+            }
+    
+            .dataBorders {
+                margin-left: 0rem;
+                padding-top: 1rem;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 1rem;
+                justify-content: space-between;
+                margin-bottom: 4rem;
+    
+                button {
+                    border: none;
+                    margin: 0 0.25rem;
+                    padding: 0.25rem 1rem;
+                    box-shadow: $shadow;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+    
+                button.light {
+                    background-color: $light-mode-elements;
+                    color: $light-mode-text;
+                }
+    
+                button.dark {
+                    background-color: $dark-mode-elements;
+                    color: $dark-mode-text;
+                }
+            }
+        }
+    
+        .countryData.light {
+            color: $light-mode-text;
+        }
+    
+        .countryData.dark {
+            color: $dark-mode-text;
+        }
+    }
+
+
 }

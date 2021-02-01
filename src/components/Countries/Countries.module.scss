@@ -8,3 +8,12 @@
     grid-gap: 3.5rem;
     
 }
+
+// mobile styles
+@media only screen and (max-width: $mobile-width) {
+    .countryContainer {
+        //width: 100%;
+        //display: block;
+        grid-template-columns: auto;
+    }
+}
