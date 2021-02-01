@@ -27,6 +27,7 @@
 }
 .pageContainer .detailsContainer {
   padding: 6rem 3.5rem;
+  height: 100vh;
 }
 
 .pageContainer.light {
@@ -73,37 +74,48 @@
 }
 .detailPanelContainer .countryFlag img {
   width: 100%;
-  height: 400px;
   object-fit: cover;
+  box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.125);
+  box-sizing: border-box;
 }
 .detailPanelContainer .countryData {
-  margin-left: 6rem;
   font-size: 1rem;
   font-weight: 300;
   line-height: 2rem;
-  padding-top: 1.75rem;
+}
+.detailPanelContainer .countryData h2 {
+  margin-left: 6rem;
+  font-size: 2rem;
+  padding-bottom: 2rem;
 }
 .detailPanelContainer .countryData .countryDataUpperSection {
   display: flex;
   justify-content: space-around;
 }
-.detailPanelContainer .countryData .countryDataUpperSection h2 {
-  font-size: 2rem;
-  padding-bottom: 2rem;
+.detailPanelContainer .countryData .countryDataUpperSection .dataLeftCol,
+.detailPanelContainer .countryData .countryDataUpperSection .dataRightCol {
+  margin-left: 6rem;
 }
 .detailPanelContainer .countryData .countryDataUpperSection .dataLeftCol p span,
 .detailPanelContainer .countryData .countryDataUpperSection .dataRightCol p span {
   font-weight: 600;
 }
-.detailPanelContainer .countryData .countryDataUpperSection .dataRightCol {
-  padding-left: 8rem;
-  padding-top: 3.5rem;
-}
 .detailPanelContainer .countryData .dataBorders {
+  margin-left: 6rem;
   padding-top: 6rem;
 }
 .detailPanelContainer .countryData .dataBorders span {
   font-weight: 600;
+}
+.detailPanelContainer .countryData button {
+  border: none;
+  margin: 0 0.25rem;
+  padding: 0.25rem 1rem;
+  box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.125);
+}
+.detailPanelContainer .countryData button.light {
+  background-color: #FFF;
+  color: #111517;
 }
 .detailPanelContainer .countryData.light {
   color: #111517;

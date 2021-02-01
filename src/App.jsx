@@ -75,8 +75,6 @@ function App() {
     </div>
   )
 
-
-
   return (
 
     <div className={`${styles.pageContainer} ${themeClass}`}>

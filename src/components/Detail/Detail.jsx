@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Detail.module.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { useState, useEffect } from 'react';
 
 const Detail = (props) => {
 
@@ -12,8 +13,18 @@ const Detail = (props) => {
   const backButtonJSX = <div className={`${styles.backButton} ${themeClass}`} onClick={() => setViewingDetails(false)}>
     <FontAwesomeIcon icon={faArrowLeft} /><span className={styles.backText}>Back</span></div>;
 
+  const currenciesJSX = countryDetails.currencies.map((curr, i) => curr.name).join(", ");
 
-  console.log(countryDetails);
+  const languagesJSX = countryDetails.languages.map((lang) => lang.name).join(", ");
+
+  const borderButtonsJSX = countryDetails.borders.map((country) => <button className={`${themeClass}`}>{country}</button>);
+
+  const numberWithSeparator = (num, sep) => {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, sep);
+  }
+
+
+
 
   return (
     <>
@@ -23,30 +34,25 @@ const Detail = (props) => {
         <div className={styles.countryFlag}>
           <img src={countryDetails.flag} alt={`Flag of ${countryDetails.name}`} />
         </div>
-        <div className={`${styles.countryData} ${themeClass}`}>
+        <div className={`${styles.countryData} ${themeClass}`}><h2>{countryDetails.name}</h2>
           <div className={styles.countryDataUpperSection}>
 
 
             <div className={styles.dataLeftCol}>
-              <h2>{countryDetails.name}</h2>
+
               <p><span>Native Name: </span>{countryDetails.nativeName}</p>
-              <p><span>Population: </span>{countryDetails.population}</p>
+              <p><span>Population: </span>{numberWithSeparator(countryDetails.population, ',')}</p>
               <p><span>Region: </span>{countryDetails.region}</p>
               <p><span>Sub-region: </span>{countryDetails.subregion}</p>
               <p><span>Capital: </span>{countryDetails.capital}</p>
             </div>
             <div className={styles.dataRightCol}>
-              <p><span>Top Level Domain: </span>xxxxx</p>
-              <p><span>Currencies: </span>xxxxx</p>
-              <p><span>Languages: </span>xxxxx</p>
-              {/* <p>Top Level Domain: {countryDetails.topLevelDomain}</p>
-            <p>Currencies: {countryDetails.currencies}</p>
-            <p>Languages: {countryDetails.languages}</p> */}
+              <p><span>Top Level Domain: </span>{countryDetails.topLevelDomain[0]}</p>
+              <p><span>Currencies: </span>{currenciesJSX}</p>
+              <p><span>Languages: </span>{languagesJSX}</p>
             </div>
           </div>
-
-          {/* <div className={styles.dataLinks}>Border Countries: {countryDetails.borders}</div> */}
-          <div className={styles.dataBorders}><span>Border Countries: </span>xxxxxx</div>
+          <div className={styles.dataBorders}><span>Border Countries: </span>{borderButtonsJSX}</div>
 
         </div>
 
