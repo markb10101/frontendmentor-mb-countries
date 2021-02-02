@@ -7,37 +7,39 @@
   user-select: none;
 }
 
-.pageContainer {
+body .pageContainer {
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
 }
-.pageContainer .searchFilterRow {
+body .pageContainer .searchFilterRow {
   width: 100%;
   padding-top: 4rem;
   display: flex;
   justify-content: space-between;
 }
-.pageContainer .searchFilterRow .searchContainer,
-.pageContainer .searchFilterRow .filterContainer {
+body .pageContainer .searchFilterRow .searchContainer,
+body .pageContainer .searchFilterRow .filterContainer {
   padding: 2rem 3.5rem 0.25rem 3.5rem;
 }
-.pageContainer .countriesContainer {
+body .pageContainer .countriesContainer {
+  width: 100%;
   padding: 2rem 3.5rem;
 }
-.pageContainer .detailsContainer {
+body .pageContainer .detailsContainer {
   padding: 6rem 3.5rem;
   height: 100%;
 }
 
-.pageContainer.light {
+.light {
   background-color: #FAFAFA;
 }
 
-.pageContainer.dark {
+.dark {
   background-color: #202C37;
 }
 
-@media only screen and (max-width: 601px) {
+@media only screen and (max-width: 721px) {
   .searchFilterRow {
     flex-direction: column;
   }
