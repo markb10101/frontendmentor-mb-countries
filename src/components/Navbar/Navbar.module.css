@@ -7,6 +7,9 @@
   user-select: none;
 }
 
+body {
+  min-width: fit-content;
+}
 body .pageContainer {
   width: 100%;
   max-width: 1440px;
@@ -59,9 +62,7 @@ body .pageContainer .detailsContainer {
   font-weight: 800;
 }
 .navContainer div .theme {
-  position: absolute;
-  top: 1.25rem;
-  right: 3.5rem;
+  margin-right: 2rem;
   font-size: 1rem;
   font-weight: 600;
 }

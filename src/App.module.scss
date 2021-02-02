@@ -23,6 +23,8 @@ $mobile-width: 721px;
 }
 
 body {
+    //width: 150%;
+    min-width: fit-content;
     .pageContainer {
 
         width: 100%;

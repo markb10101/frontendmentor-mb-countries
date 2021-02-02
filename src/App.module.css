@@ -7,6 +7,9 @@
   user-select: none;
 }
 
+body {
+  min-width: fit-content;
+}
 body .pageContainer {
   width: 100%;
   max-width: 1440px;
