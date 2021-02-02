@@ -7,37 +7,35 @@
   user-select: none;
 }
 
-.pageContainer {
+body .pageContainer {
   width: 100%;
   max-width: 1440px;
-  margin: 0;
+  margin: 0 auto;
 }
-.pageContainer .searchFilterRow {
-  border: 1px solid black;
+body .pageContainer .searchFilterRow {
   width: 100%;
   padding-top: 4rem;
   display: flex;
   justify-content: space-between;
 }
-.pageContainer .searchFilterRow .searchContainer,
-.pageContainer .searchFilterRow .filterContainer {
+body .pageContainer .searchFilterRow .searchContainer,
+body .pageContainer .searchFilterRow .filterContainer {
   padding: 2rem 3.5rem 0.25rem 3.5rem;
 }
-.pageContainer .countriesContainer {
-  border: 1px solid blue;
+body .pageContainer .countriesContainer {
   width: 100%;
   padding: 2rem 3.5rem;
 }
-.pageContainer .detailsContainer {
+body .pageContainer .detailsContainer {
   padding: 6rem 3.5rem;
   height: 100%;
 }
 
-.pageContainer.light {
+.light {
   background-color: #FAFAFA;
 }
 
-.pageContainer.dark {
+.dark {
   background-color: #202C37;
 }
 
@@ -71,7 +69,6 @@
   cursor: pointer;
 }
 .navContainer div .theme span {
-  border: 1px solid blue;
   padding-left: 0.5rem;
 }
 
