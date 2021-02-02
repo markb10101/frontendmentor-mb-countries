@@ -7,46 +7,38 @@
   user-select: none;
 }
 
-body {
-  background-color: #202C37;
-}
-body .pageContainer {
+.pageContainer {
   max-width: 1440px;
   margin: 0 auto;
 }
-body .pageContainer .searchFilterRow {
+.pageContainer .searchFilterRow {
   width: 100%;
-  max-width: 1440px;
   padding-top: 4rem;
   display: flex;
   justify-content: space-between;
 }
-body .pageContainer .searchFilterRow .searchContainer,
-body .pageContainer .searchFilterRow .filterContainer {
+.pageContainer .searchFilterRow .searchContainer,
+.pageContainer .searchFilterRow .filterContainer {
   padding: 2rem 3.5rem 0.25rem 3.5rem;
 }
-body .pageContainer .countriesContainer {
+.pageContainer .countriesContainer {
   padding: 2rem 3.5rem;
 }
-body .pageContainer .detailsContainer {
+.pageContainer .detailsContainer {
   padding: 6rem 3.5rem;
   height: 100%;
 }
-body .pageContainer.light {
+
+.pageContainer.light {
   background-color: #FAFAFA;
 }
-body .pageContainer.dark {
+
+.pageContainer.dark {
   background-color: #202C37;
 }
 
 @media only screen and (max-width: 601px) {
-  body .pageContainer {
-    margin: 0 auto;
-  }
-  body .pageContainer .searchFilterRow {
-    width: 100%;
-    padding-top: 4rem;
-    display: flex;
+  .searchFilterRow {
     flex-direction: column;
   }
 }
@@ -114,7 +106,6 @@ body .pageContainer.dark {
   }
   .linkContainer .countryCard .cardText .statisticType {
     font-size: 1.25rem;
-    font-weight: 800;
   }
   .linkContainer .countryCard .cardText .statistic {
     font-size: 1.25rem;
