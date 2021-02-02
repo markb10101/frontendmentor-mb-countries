@@ -7,16 +7,13 @@
   user-select: none;
 }
 
-body {
-  background-color: #202C37;
-}
 body .pageContainer {
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
 }
 body .pageContainer .searchFilterRow {
   width: 100%;
-  max-width: 1440px;
   padding-top: 4rem;
   display: flex;
   justify-content: space-between;
@@ -26,44 +23,40 @@ body .pageContainer .searchFilterRow .filterContainer {
   padding: 2rem 3.5rem 0.25rem 3.5rem;
 }
 body .pageContainer .countriesContainer {
+  width: 100%;
   padding: 2rem 3.5rem;
 }
 body .pageContainer .detailsContainer {
   padding: 6rem 3.5rem;
   height: 100%;
 }
-body .pageContainer.light {
+
+.light {
   background-color: #FAFAFA;
 }
-body .pageContainer.dark {
+
+.dark {
   background-color: #202C37;
 }
 
-@media only screen and (max-width: 601px) {
-  body .pageContainer {
-    margin: 0 auto;
-  }
-  body .pageContainer .searchFilterRow {
-    width: 100%;
-    padding-top: 4rem;
-    display: flex;
+@media only screen and (max-width: 721px) {
+  .searchFilterRow {
     flex-direction: column;
   }
 }
 .linkContainer {
   text-decoration: none;
+  margin: 0 3.3rem 3.5rem 0;
 }
 .linkContainer .countryCard {
   border-radius: 5px;
-  width: 18rem;
-  height: 22rem;
+  width: 17rem;
   box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.25);
 }
 .linkContainer .countryCard:hover {
   cursor: pointer;
 }
 .linkContainer .countryCard .flagContainer {
-  width: 18rem;
   height: 10rem;
 }
 .linkContainer .countryCard .flagContainer img {
@@ -90,20 +83,20 @@ body .pageContainer.dark {
 }
 
 .countryCard.light {
+  background-color: #FFF;
   color: #111517;
 }
 
 .countryCard.dark {
+  background-color: #2B3945;
   color: #FFF;
 }
 
-@media only screen and (max-width: 601px) {
+@media only screen and (max-width: 721px) {
   .linkContainer .countryCard {
-    width: 24rem;
     height: 30rem;
   }
   .linkContainer .countryCard .flagContainer {
-    width: 24rem;
     height: 14rem;
   }
   .linkContainer .countryCard .cardText {
@@ -114,7 +107,6 @@ body .pageContainer.dark {
   }
   .linkContainer .countryCard .cardText .statisticType {
     font-size: 1.25rem;
-    font-weight: 800;
   }
   .linkContainer .countryCard .cardText .statistic {
     font-size: 1.25rem;

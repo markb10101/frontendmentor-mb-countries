@@ -2,11 +2,11 @@
 
 .linkContainer {
     text-decoration: none;
+    margin: 0 3.3rem 3.5rem 0;
 
     .countryCard {
         border-radius: 5px;
-        width: 18rem;
-        height: 22rem;
+        width: 17rem;
         box-shadow: $shadow;
 
         &:hover {
@@ -14,7 +14,6 @@
         }
 
         .flagContainer {
-            width: 18rem;
             height: 10rem;
 
             img {
@@ -48,29 +47,26 @@
 }
 
 .countryCard.light {
+    background-color: $light-mode-elements;
     color: $light-mode-text;
 }
 
 .countryCard.dark {
+    background-color: $dark-mode-elements;
     color: $dark-mode-text;
 }
 
-// mobile styles
 @media only screen and (max-width: $mobile-width) {
 
     .linkContainer {
         .countryCard {
-
-            width: 24rem;
             height: 30rem;
 
             .flagContainer {
-                width: 24rem;
                 height: 14rem;
             }
 
             .cardText {
-
                 line-height: 2rem;
 
                 h2 {
@@ -79,14 +75,12 @@
 
                 .statisticType {
                     font-size: 1.25rem;
-                    font-weight: 800;
                 }
 
                 .statistic {
                     font-size: 1.25rem;
                 }
             }
-
         }
     }
 }

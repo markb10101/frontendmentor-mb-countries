@@ -7,16 +7,13 @@
   user-select: none;
 }
 
-body {
-  background-color: #202C37;
-}
 body .pageContainer {
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
 }
 body .pageContainer .searchFilterRow {
   width: 100%;
-  max-width: 1440px;
   padding-top: 4rem;
   display: flex;
   justify-content: space-between;
@@ -26,27 +23,24 @@ body .pageContainer .searchFilterRow .filterContainer {
   padding: 2rem 3.5rem 0.25rem 3.5rem;
 }
 body .pageContainer .countriesContainer {
+  width: 100%;
   padding: 2rem 3.5rem;
 }
 body .pageContainer .detailsContainer {
   padding: 6rem 3.5rem;
   height: 100%;
 }
-body .pageContainer.light {
+
+.light {
   background-color: #FAFAFA;
 }
-body .pageContainer.dark {
+
+.dark {
   background-color: #202C37;
 }
 
-@media only screen and (max-width: 601px) {
-  body .pageContainer {
-    margin: 0 auto;
-  }
-  body .pageContainer .searchFilterRow {
-    width: 100%;
-    padding-top: 4rem;
-    display: flex;
+@media only screen and (max-width: 721px) {
+  .searchFilterRow {
     flex-direction: column;
   }
 }
@@ -60,34 +54,43 @@ body .pageContainer.dark {
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.125);
   position: fixed;
 }
-.navContainer h1 {
+.navContainer div h1 {
   font-size: 1.25rem;
   font-weight: 800;
 }
-.navContainer .theme {
+.navContainer div .theme {
   position: absolute;
   top: 1.25rem;
   right: 3.5rem;
   font-size: 1rem;
   font-weight: 600;
 }
-.navContainer .theme:hover {
+.navContainer div .theme:hover {
   cursor: pointer;
 }
-.navContainer .theme span {
+.navContainer div .theme span {
   padding-left: 0.5rem;
 }
 
 .navContainer.light {
   background-color: #FFF;
 }
-.navContainer.light h1, .navContainer.light .themeIcon, .navContainer.light .themeText {
+.navContainer.light h1,
+.navContainer.light .theme {
   color: #111517;
 }
 
 .navContainer.dark {
   background-color: #2B3945;
 }
-.navContainer.dark h1, .navContainer.dark .theme {
+.navContainer.dark h1,
+.navContainer.dark .theme {
   color: #FFF;
+}
+
+@media only screen and (max-width: 721px) {
+  .navContainer div .theme span {
+    border: none;
+    display: none;
+  }
 }

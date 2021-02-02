@@ -7,16 +7,13 @@
   user-select: none;
 }
 
-body {
-  background-color: #202C37;
-}
 body .pageContainer {
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
 }
 body .pageContainer .searchFilterRow {
   width: 100%;
-  max-width: 1440px;
   padding-top: 4rem;
   display: flex;
   justify-content: space-between;
@@ -26,38 +23,34 @@ body .pageContainer .searchFilterRow .filterContainer {
   padding: 2rem 3.5rem 0.25rem 3.5rem;
 }
 body .pageContainer .countriesContainer {
+  width: 100%;
   padding: 2rem 3.5rem;
 }
 body .pageContainer .detailsContainer {
   padding: 6rem 3.5rem;
   height: 100%;
 }
-body .pageContainer.light {
+
+.light {
   background-color: #FAFAFA;
 }
-body .pageContainer.dark {
+
+.dark {
   background-color: #202C37;
 }
 
-@media only screen and (max-width: 601px) {
-  body .pageContainer {
-    margin: 0 auto;
-  }
-  body .pageContainer .searchFilterRow {
-    width: 100%;
-    padding-top: 4rem;
-    display: flex;
+@media only screen and (max-width: 721px) {
+  .searchFilterRow {
     flex-direction: column;
   }
 }
 .countryContainer {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 3.5rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 601px) {
+@media only screen and (max-width: 721px) {
   .countryContainer {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
   }
 }
