@@ -8,10 +8,12 @@
 }
 
 .pageContainer {
+  width: 100%;
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 0;
 }
 .pageContainer .searchFilterRow {
+  border: 1px solid black;
   width: 100%;
   padding-top: 4rem;
   display: flex;
@@ -22,6 +24,8 @@
   padding: 2rem 3.5rem 0.25rem 3.5rem;
 }
 .pageContainer .countriesContainer {
+  border: 1px solid blue;
+  width: 100%;
   padding: 2rem 3.5rem;
 }
 .pageContainer .detailsContainer {
@@ -37,7 +41,7 @@
   background-color: #202C37;
 }
 
-@media only screen and (max-width: 601px) {
+@media only screen and (max-width: 721px) {
   .searchFilterRow {
     flex-direction: column;
   }
@@ -84,8 +88,9 @@
   color: #FFF;
 }
 
-@media only screen and (max-width: 601px) {
+@media only screen and (max-width: 721px) {
   .search {
-    width: 24rem;
+    width: 90%;
+    min-width: 18rem;
   }
 }
