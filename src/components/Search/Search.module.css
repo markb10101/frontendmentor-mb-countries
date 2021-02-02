@@ -8,18 +8,17 @@
 }
 
 .pageContainer {
-  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
 }
 .pageContainer .searchFilterRow {
   width: 100%;
-  max-width: 1440px;
   padding-top: 4rem;
   display: flex;
   justify-content: space-between;
 }
-.pageContainer .searchFilterRow .searchContainer, .pageContainer .searchFilterRow .filterContainer {
+.pageContainer .searchFilterRow .searchContainer,
+.pageContainer .searchFilterRow .filterContainer {
   padding: 2rem 3.5rem 0.25rem 3.5rem;
 }
 .pageContainer .countriesContainer {
@@ -38,15 +37,8 @@
   background-color: #202C37;
 }
 
-@media only screen and (max-width: 512px) {
-  .pageContainer {
-    width: 100%;
-    margin: 0 auto;
-  }
-  .pageContainer .searchFilterRow {
-    width: 100%;
-    padding-top: 4rem;
-    display: flex;
+@media only screen and (max-width: 601px) {
+  .searchFilterRow {
     flex-direction: column;
   }
 }
@@ -54,7 +46,7 @@
   width: 30rem;
   height: 3rem;
   border-radius: 5px;
-  box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.125);
+  box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.25);
   padding: 0.75rem 1.5rem;
 }
 .search .searchIcon {
@@ -92,7 +84,7 @@
   color: #FFF;
 }
 
-@media only screen and (max-width: 512px) {
+@media only screen and (max-width: 601px) {
   .search {
     width: 24rem;
   }

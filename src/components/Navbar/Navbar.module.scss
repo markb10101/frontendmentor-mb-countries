@@ -1,35 +1,38 @@
 @import "../../App.module.scss";
 
 .navContainer {
+    
     width: 100%;
     height: 3.5rem;
     max-width: 1440px;
-
     display: flex;
     justify-content: space-between;
-    
-    padding: 1rem 3.5rem;   
+    padding: 1rem 3.5rem;
     box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.125);
     position: fixed;
 
-    h1 {
-        font-size: 1.25rem;
-        font-weight: 800;
+    div {
+        h1 {
+            font-size: 1.25rem;
+            font-weight: 800;
+        }
     }
 
-    .theme {
-        position: absolute;
-        top: 1.25rem;
-        right: 3.5rem;
-        font-size: 1rem;
-        font-weight: 600;
+    div {
+        .theme {
+            position: absolute;
+            top: 1.25rem;
+            right: 3.5rem;
+            font-size: 1rem;
+            font-weight: 600;
 
-        &:hover {
-            cursor: pointer;
-        }
+            &:hover {
+                cursor: pointer;
+            }
 
-        span {
-            padding-left: 0.5rem;
+            span {
+                padding-left: 0.5rem;
+            }
         }
     }
 }
@@ -37,7 +40,9 @@
 .navContainer.light {
     background-color: $light-mode-elements;
 
-    h1, .themeIcon, .themeText {
+    h1,
+    .themeIcon,
+    .themeText {
         color: $light-mode-text;
     }
 
@@ -46,7 +51,8 @@
 .navContainer.dark {
     background-color: $dark-mode-elements;
 
-    h1, .theme {
+    h1,
+    .theme {
         color: $dark-mode-text;
     }
 }

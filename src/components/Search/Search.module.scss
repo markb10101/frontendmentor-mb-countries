@@ -22,7 +22,6 @@
             border-style: none;
         }
     }
-
 }
 
 .search.light {
@@ -47,11 +46,8 @@
     }
 }
 
-
-// mobile styles
 @media only screen and (max-width: $mobile-width) {
     .search {
-        width: 24rem;
-       
+        width: 24rem;      
     }
 }

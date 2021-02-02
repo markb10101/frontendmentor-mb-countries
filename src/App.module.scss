@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 
-// variables
 $dark-mode-elements: #2B3945;
 $dark-mode-background: #202C37;
 $dark-mode-text: #FFF;
@@ -22,57 +21,42 @@ $mobile-width: 601px;
     user-select: none;
 }
 
-body {
+.pageContainer {
+    max-width: 1440px;
+    margin: 0 auto;
 
-    .pageContainer {
-        max-width: 1440px;
-        margin: 0 auto;
+    .searchFilterRow {
+        width: 100%;
+        padding-top: 4rem;
+        display: flex;
+        justify-content: space-between;
 
-        .searchFilterRow {
-            width: 100%;
-            max-width: 1440px;
-            padding-top: 4rem;
-            display: flex;
-            justify-content: space-between;
-
-            .searchContainer,
-            .filterContainer {
-                padding: 2rem 3.5rem 0.25rem 3.5rem;
-            }
-        }
-
-        .countriesContainer {
-            padding: 2rem 3.5rem;
-        }
-
-        .detailsContainer {
-            padding: 6rem 3.5rem;
-            height: 100%;
+        .searchContainer,
+        .filterContainer {
+            padding: 2rem 3.5rem 0.25rem 3.5rem;
         }
     }
 
-    .pageContainer.light {
-        background-color: $light-mode-background;
+    .countriesContainer {
+        padding: 2rem 3.5rem;
     }
 
-    .pageContainer.dark {
-        background-color: $dark-mode-background;
+    .detailsContainer {
+        padding: 6rem 3.5rem;
+        height: 100%;
     }
 }
 
-// mobile styles
+.pageContainer.light {
+    background-color: $light-mode-background;
+}
+
+.pageContainer.dark {
+    background-color: $dark-mode-background;
+}
+
 @media only screen and (max-width: $mobile-width) {
-
-    body {
-        .pageContainer {
-            margin: 0 auto;
-
-            .searchFilterRow {
-                width: 100%;
-                padding-top: 4rem;
-                display: flex;
-                flex-direction: column;
-            }
-        }
+    .searchFilterRow {
+        flex-direction: column;
     }
 }
