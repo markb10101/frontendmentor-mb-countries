@@ -19,7 +19,7 @@ const Search = (props) => {
   return (
     <>
       <form className={`${styles.search} ${themeClass}`}>
-        {searchIconJSX}<input value={searchInputValue} type='text' onInput={e => setSearchTerm(e.target.value)} placeholder={placeholderJSX}/>
+        {searchIconJSX}<input value={searchInputValue} type='text' aria-label="search" onInput={e => setSearchTerm(e.target.value)} placeholder={placeholderJSX}/>
         </form>
     </>
   );

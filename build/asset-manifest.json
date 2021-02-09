@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/frontendmentor-mb-countries/static/css/main.6638af6f.chunk.css",
+    "main.css": "/frontendmentor-mb-countries/static/css/main.24c0194e.chunk.css",
     "main.js": "/frontendmentor-mb-countries/static/js/main.6108bac5.chunk.js",
     "main.js.map": "/frontendmentor-mb-countries/static/js/main.6108bac5.chunk.js.map",
     "runtime-main.js": "/frontendmentor-mb-countries/static/js/runtime-main.9e14fb3e.js",
@@ -10,13 +10,13 @@
     "static/js/3.decd3bf4.chunk.js": "/frontendmentor-mb-countries/static/js/3.decd3bf4.chunk.js",
     "static/js/3.decd3bf4.chunk.js.map": "/frontendmentor-mb-countries/static/js/3.decd3bf4.chunk.js.map",
     "index.html": "/frontendmentor-mb-countries/index.html",
-    "static/css/main.6638af6f.chunk.css.map": "/frontendmentor-mb-countries/static/css/main.6638af6f.chunk.css.map",
+    "static/css/main.24c0194e.chunk.css.map": "/frontendmentor-mb-countries/static/css/main.24c0194e.chunk.css.map",
     "static/js/2.7743064e.chunk.js.LICENSE.txt": "/frontendmentor-mb-countries/static/js/2.7743064e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9e14fb3e.js",
     "static/js/2.7743064e.chunk.js",
-    "static/css/main.6638af6f.chunk.css",
+    "static/css/main.24c0194e.chunk.css",
     "static/js/main.6108bac5.chunk.js"
   ]
 }

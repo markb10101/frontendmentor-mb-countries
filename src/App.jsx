@@ -17,8 +17,6 @@ const App = () => {
 
   const themeClass = theme === "light" ? styles.light : styles.dark;
 
-  //const bodyColor = 
-
   useEffect(() => {
     getCountries();
   }, [])
@@ -28,9 +26,8 @@ const App = () => {
     console.log(styles);
     if (theme === "light") {
       document.body.className = 'light';
-      //document.body.classList.add(`${styles.light}`);
     } else {
- //
+      document.body.className = 'dark';
     }
   }, [theme]);
 
